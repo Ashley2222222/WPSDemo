@@ -1,0 +1,60 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- 定义好所有数字变量 字体大小 宽距... -->
+
+    <!-- 内边距规格	如果同类型增加可以_xxx来增加三级 -->
+    <dimen name="padding_tiny">1dp</dimen>
+    <dimen name="padding_micro">2dp</dimen>
+    <dimen name="padding_small">4dp</dimen>
+    <dimen name="padding_normal">8dp</dimen>
+    <dimen name="padding_big">12dp</dimen>
+    <dimen name="padding_large">16dp</dimen>
+    <dimen name="padding_large_x">32dp</dimen>
+    <dimen name="padding_large_xx">48dp</dimen>
+    <!-- 外边距规格 -->
+    <dimen name="margin_micro">2dp</dimen>
+    <dimen name="margin_small">4dp</dimen>
+    <dimen name="margin_normal">8dp</dimen>
+    <dimen name="margin_big">12dp</dimen>
+    <dimen name="margin_large">16dp</dimen>
+    <dimen name="margin_large_x">28dp</dimen>
+    <dimen name="margin_large_xx">80dp</dimen>
+
+    <!-- 矩形圆角规格	 -->
+    <dimen name="radius_micro">0.1dp</dimen>
+    <dimen name="radius_small">3dp</dimen>
+    <dimen name="radius_normal">6dp</dimen>
+    <dimen name="radius_big">10dp</dimen>
+    <dimen name="radius_large">15dp</dimen>
+
+    <!-- 字体大小规格	 -->
+    <dimen name="font_micro">8sp</dimen>
+    <dimen name="font_small">12sp</dimen>
+    <dimen name="font_normal">18sp</dimen>
+    <dimen name="font_big">24sp</dimen>
+    <dimen name="font_large">28sp</dimen>
+
+    <!-- 高度规格 -->
+    <dimen name="height_bar">5dp</dimen>
+    <dimen name="height_small">35dp</dimen>
+    <dimen name="height_normal">60dp</dimen>
+    <dimen name="height_big">80dp</dimen>
+    <dimen name="height_large">135dp</dimen>
+    <dimen name="height_title_bar">25dp</dimen><!--标题前的蓝色条-->
+    <!-- 图标大小规格 -->
+    <dimen name="icon_small">34dp</dimen>
+    <dimen name="icon_normal">45dp</dimen>
+    <dimen name="icon_middle">50dp</dimen>
+    <dimen name="icon_big">70dp</dimen>
+    <dimen name="icon_large">100dp</dimen>
+    <dimen name="icon_x_large">150dp</dimen>
+    <dimen name="icon_xx_large">200dp</dimen>
+
+    <!--图片选择-->
+    <dimen name="ui_10_dip">10dip</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+</resources>

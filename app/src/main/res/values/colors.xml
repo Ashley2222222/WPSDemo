@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <!-- 纯白色 -->
+    <color name="white_pure">#FFFFFF</color>
+
+    <!--橙色 -->
+    <color name="orange">#fda63f</color><!--登录按钮-->
+
+    <!-- 文字的黑色 -->
+    <color name="black">#666</color>
+    <color name="black_title">#555559</color><!--标题-->
+
+    <!--绿色-->
+    <color name="green">#56c023</color><!--底部确定提交按钮-->
+    <!-- 半透明黑色效果 -->
+    <color name="location_name">#444</color><!--场所名称颜色-->
+
+    <!-- APP用到的蓝色 -->
+    <color name="location_blue">#5F94c1</color><!--场所日期颜色-->
+    <color name="location_base_blue">#66abf8</color><!--场所基本信息蓝色-->
+    <color name="title_blue">#41a2f4</color><!--标题栏蓝色-->
+    <color name="blue">#41a2f4</color><!--标题栏蓝色-->
+    <color name="help_blue">#9acdf8</color><!--帮助小标题蓝色-->
+    <!-- 灰色-->
+    <color name="grey">#DDDDDD</color><!--场所地址颜色-->
+    <color name="grey2">#EEE</color><!--场所列表项间隔-->
+    <color name="grey3">#90a9ba</color><!--场所列表底部导航灰色-->
+    <color name="grey4">#a8a8a8</color><!--场所列表搜索框文字颜色-->
+    <color name="grey5">#a0a0a0</color><!--弹出框按钮文字未点击时颜色-->
+    <color name="grey_button_not_chosen">#8FA8B9</color><!--图文按钮文字未点击时颜色-->
+
+    <!-- APP中用到的红色 -->
+    <color name="red_error">#ff3b30</color><!--出错的文字红色-->
+
+
+    <!--
+    以下未原来的颜色
+            该文件用户保存该APP所需要的颜色值
+            注： 添加每个颜色值时请务必在其前面加上较为详细的注释
+        -->
+    <color name="red_map_text">#F12121</color><!--地图上红色字体标注-->
+    <!-- 全透明效果 -->
+    <color name="invisible">#00000000</color>
+    <!-- 半透明黑色效果 -->
+    <color name="half_alpha">#A0000000</color>
+
+
+    <!-- APP中用到的白色 -->
+
+    <!-- APP深灰色 -->
+    <!--    <color name="gray_dark">#4B4B4B</color>-->
+    <!-- APP中使用到的偏深灰色 -->
+    <color name="gray_deep">#616161</color>
+    <!-- APP中用到的较灰色-->
+    <color name="gray_heavy">#9a9a9a</color>
+    <!-- APP中用到的常规的灰色 -->
+    <color name="gray">#CCCCCA</color>
+
+    <!-- APP中用到的淡灰色 -->
+    <color name="gray_light">#E2E2E2</color>
+    <!-- 灰常灰常浅的灰色 -->
+    <color name="gray_very_light">#F0F0F0</color>
+
+    <!-- APP中比常规绿色更深的绿色 -->
+    <color name="green_heavy">#4b9c0a</color>
+    <!-- 亮绿色 -->
+    <color name="green_shine">#8FD300</color>
+    <!-- APP中部分背景用到的淡绿色 最淡的 -->
+    <color name="green_light_one">#E9FBD5</color>
+    <!-- APP中部分背景用到的淡绿色 比较深一些-->
+    <color name="green_light_two">#CFF3A9</color>
+    <!-- APP中再深一些的淡绿色 -->
+    <color name="green_light_three">#D8FBAF</color>
+    <!-- APP中部分文字使用到的较深的绿色 -->
+    <color name="green_deep">#204512</color>
+
+
+    <!-- 二维码扫描页面需要样式 -->
+    <color name="viewfinder_frame">#ff000000</color>
+    <color name="viewfinder_laser">#ffff0000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="result_view">#b0000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+
+    <!-- 上传图片添加的颜色 -->
+    <color name="none_color">#00000000</color>
+    <color name="plugin_camera_black">#000000</color>
+    <color name="albumback">#E1E0DE</color>
+
+    <color name="style_red">#ff4c41</color>
+    <color name="style_divider_color">#C9C7CD</color>
+
+</resources>
