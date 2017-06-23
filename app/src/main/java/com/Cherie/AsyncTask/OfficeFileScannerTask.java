@@ -16,8 +16,8 @@ import java.util.List;
 import com.Cherie.model.fileInfo;
 
 /**
- * 遍历列出所有视频文件
- * Created by liangxy on 2017/5/26.
+ * list all office files in the machine
+ * Created by liangxy on 2017/6/22.
  */
 public class OfficeFileScannerTask extends AsyncTask<Void, Integer, List<fileInfo>> {
     private List<fileInfo> fileInfos = new ArrayList<fileInfo>();

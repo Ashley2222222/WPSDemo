@@ -30,9 +30,10 @@ import java.util.List;
 
 /**
  * @author liangxueyi
- * @Fields FieldListAdapter : 场所列表适配器
- * @since 2016/12/23 15:37
+ * @Fields FieldListAdapter : adapter for show file info
+ * @since 2017/6/22 10:33
  */
+
 public class FileListAdapter extends BaseAdapter {
     public static double FONTSIZE;
     private List<fileInfo> items = null;

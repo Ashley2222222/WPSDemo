@@ -86,7 +86,7 @@ public class DownloadWpsUtil {
                         break;
                     //下载失败
                     case DownloadManager.STATUS_FAILED:
-                        Toast.makeText(mContext, "下载失败,请先到应用市场下次WPSOffice应用", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(mContext, "下载失败,请先到应用市场下载WPSOffice应用", Toast.LENGTH_SHORT).show();
                         break;
                 }
             }

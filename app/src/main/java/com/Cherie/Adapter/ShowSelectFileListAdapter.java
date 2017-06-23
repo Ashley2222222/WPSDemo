@@ -24,7 +24,7 @@ import java.util.List;
 /**
  * @Fields FieldListAdapter : 选择文件返回后，显示文件列表
  *@author  liangxueyi
- * @since 2016/12/23 15:37
+ * @since 2017/6/23 15:37
  */
 public class ShowSelectFileListAdapter extends BaseAdapter {
 	public static double FONTSIZE;

@@ -20,6 +20,7 @@ import java.io.File;
 import java.util.List;
 
 /**
+ * using wpsOffice to preview the chosen file
  * Created by liangxy on 2017/6/22.
  */
 public class FileUtil {
