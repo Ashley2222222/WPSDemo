@@ -1,4 +1,4 @@
-package com.houjianbo.Utils;
+package com.Cherie.Utils;
 
 import android.app.ProgressDialog;
 import android.content.ActivityNotFoundException;
@@ -13,8 +13,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 
-import com.houjianbo.CommVariable;
-import com.houjianbo.model.WpsInfo;
+import com.Cherie.CommVariable;
+import com.Cherie.model.WpsInfo;
 
 import java.io.File;
 import java.util.List;
@@ -86,7 +86,7 @@ public class FileUtil {
     }
 
     //安装wps
-    public static void installWps(Handler handler,Context ctx) {
+    public static void installWps(Context ctx) {
         mProgressDialog = new ProgressDialog(ctx);
         DownloadWpsUtil downloadUtils =   new DownloadWpsUtil(ctx);
         downloadUtils.downloadAPK(ctx,"http://dl.op.wpscdn.cn/dl/wps/mobile/apk/moffice_10.3.2_1033_cn00563_multidex_9119546.apk","office.apk");

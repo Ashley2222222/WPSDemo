@@ -1,4 +1,4 @@
-package com.houjianbo.model;
+package com.Cherie.model;
 
 import java.io.Serializable;
 

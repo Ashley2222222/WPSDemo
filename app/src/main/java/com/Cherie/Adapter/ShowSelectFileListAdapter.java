@@ -1,28 +1,22 @@
 /**
  *
  */
-package com.houjianbo.Adapter;
+package com.Cherie.Adapter;
 
 import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
-import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.houjianbo.Utils.FileUtil;
-import com.houjianbo.Utils.UIUtil;
-import com.houjianbo.model.fileInfo;
-import com.houjianbo.wpsdemo.R;
+import com.Cherie.Utils.FileUtil;
+import com.Cherie.Utils.UIUtil;
+import com.Cherie.model.fileInfo;
+import com.Cherie.wpsdemo.R;
 
-import java.io.File;
 import java.util.List;
 
 /**
@@ -80,6 +74,26 @@ public class ShowSelectFileListAdapter extends BaseAdapter {
 			@Override
 			public void onClick(View v) {
 				FileUtil.openFile(items.get(currPosition).getPath(),context);
+			}
+		});
+
+		viewHolder.tv_name.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+
+				boolean installed = false;
+				installed = FileUtil.isInstall(context);
+				if(installed)
+					FileUtil.openFile(items.get(currPosition).getPath(),context);
+				else{
+					FileUtil.installWps(context);
+				}
+			}
+		});
+		convertView.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				UIUtil.setCheckBox(viewHolder.cbState);
 			}
 		});
 		this.notifyDataSetChanged();

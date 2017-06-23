@@ -1,7 +1,6 @@
-package com.houjianbo.Utils;
+package com.Cherie.Utils;
 
 import android.app.DownloadManager;
-import android.app.ProgressDialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -10,12 +9,6 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Environment;
 import android.widget.Toast;
-
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
 
 /**
  * Created by liangxy on 2017/6/22.
@@ -93,7 +86,7 @@ public class DownloadWpsUtil {
                         break;
                     //下载失败
                     case DownloadManager.STATUS_FAILED:
-                        Toast.makeText(mContext, "下载失败", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(mContext, "下载失败,请先到应用市场下次WPSOffice应用", Toast.LENGTH_SHORT).show();
                         break;
                 }
             }

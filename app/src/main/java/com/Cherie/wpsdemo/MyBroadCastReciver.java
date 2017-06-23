@@ -1,6 +1,6 @@
-package com.houjianbo.wpsdemo;
+package com.Cherie.wpsdemo;
 
-import com.houjianbo.model.WpsInfo.Reciver;
+import com.Cherie.model.WpsInfo.Reciver;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

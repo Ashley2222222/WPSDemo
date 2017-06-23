@@ -1,4 +1,4 @@
-package com.houjianbo.wpsdemo;
+package com.Cherie.wpsdemo;
 
 import android.app.Activity;
 import android.content.Context;
@@ -10,9 +10,8 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ListView;
 
-import com.houjianbo.Adapter.FileListAdapter;
-import com.houjianbo.Adapter.ShowSelectFileListAdapter;
-import com.houjianbo.model.fileInfo;
+import com.Cherie.Adapter.ShowSelectFileListAdapter;
+import com.Cherie.model.fileInfo;
 
 import java.util.List;
 

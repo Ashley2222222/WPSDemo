@@ -1,4 +1,4 @@
-package com.houjianbo.model;
+package com.Cherie.model;
 
 public class WpsInfo {
 	public static final String OPEN_MODE = "OpenMode";// 打开文件的模式。

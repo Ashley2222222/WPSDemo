@@ -1,4 +1,4 @@
-package com.houjianbo.Utils;
+package com.Cherie.Utils;
 
 import android.content.Context;
 import android.text.Html;

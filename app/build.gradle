@@ -5,7 +5,7 @@ android {
     buildToolsVersion "25.0.2"
 
     defaultConfig {
-        applicationId "com.houjianbo.wpsdemo"
+        applicationId "com.Cherie.wpsdemo"
         minSdkVersion 14
         targetSdkVersion 19
         compileOptions {

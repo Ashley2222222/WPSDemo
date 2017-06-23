@@ -1,4 +1,4 @@
-package com.houjianbo.wpsdemo;
+package com.Cherie.AsyncTask;
 
 import android.app.Activity;
 import android.os.AsyncTask;
@@ -6,14 +6,14 @@ import android.os.Environment;
 import android.util.Log;
 import android.widget.ListView;
 
-import com.houjianbo.Adapter.FileListAdapter;
+import com.Cherie.Adapter.FileListAdapter;
 
 import java.io.File;
 import java.io.FileFilter;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.houjianbo.model.fileInfo;
+import com.Cherie.model.fileInfo;
 
 /**
  * 遍历列出所有视频文件
@@ -36,7 +36,7 @@ public class OfficeFileScannerTask extends AsyncTask<Void, Integer, List<fileInf
     protected List<fileInfo> doInBackground(Void... params) {
         videoInfos = getVideoFile(videoInfos, Environment.getExternalStorageDirectory());
         videoInfos = filterVideo(videoInfos);
-        Log.i("VideoSize", "office文件数：" + videoInfos.size());
+        Log.i("ScannerTask", "office文件数：" + videoInfos.size());
         return videoInfos;
     }
 
@@ -86,7 +86,7 @@ public class OfficeFileScannerTask extends AsyncTask<Void, Integer, List<fileInf
                         video.setPath(file.getAbsolutePath());
 
                         video.setState(1);//默认选中
-                        Log.i("tga", "name" + video.getPath());
+                        Log.i("ScannerTask", "name" + video.getPath());
                         list.add(video);
                         return true;
                     }
@@ -113,9 +113,9 @@ public class OfficeFileScannerTask extends AsyncTask<Void, Integer, List<fileInf
             File f = new File(videoInfo.getPath());
             if (f.exists() && f.isFile() ) {
                 newVideos.add(videoInfo);
-                Log.i("TAG", "文件大小" + f.length());
+                Log.i("ScannerTask", "文件大小" + f.length());
             } else {
-                Log.i("TAG", "文件不存在");
+                Log.i("ScannerTask", "文件不存在");
             }
         }
         return newVideos;
