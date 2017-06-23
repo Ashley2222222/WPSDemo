@@ -20,13 +20,15 @@ import com.Cherie.model.fileInfo;
  * Created by liangxy on 2017/5/26.
  */
 public class OfficeFileScannerTask extends AsyncTask<Void, Integer, List<fileInfo>> {
-    private List<fileInfo> videoInfos = new ArrayList<fileInfo>();
+    private List<fileInfo> fileInfos = new ArrayList<fileInfo>();
+    List<fileInfo> fileChosenInfos = new ArrayList<fileInfo>();
     private Activity context = null;
     private ListView lv;
-    private FileListAdapter adapter= null;
+    private FileListAdapter adapter = null;
 
-    public OfficeFileScannerTask(List<fileInfo> videoInfos, Activity context, ListView lv, FileListAdapter adapter) {
-        this.videoInfos = videoInfos;
+    public OfficeFileScannerTask( List<fileInfo> fileInfos, List<fileInfo> fileChosenInfos, Activity context, ListView lv, FileListAdapter adapter) {
+        this.fileInfos = fileInfos;
+        this.fileChosenInfos = fileChosenInfos;
         this.context = context;
         this.lv = lv;
         this.adapter = adapter;
@@ -34,10 +36,10 @@ public class OfficeFileScannerTask extends AsyncTask<Void, Integer, List<fileInf
 
     @Override
     protected List<fileInfo> doInBackground(Void... params) {
-        videoInfos = getVideoFile(videoInfos, Environment.getExternalStorageDirectory());
-        videoInfos = filterVideo(videoInfos);
-        Log.i("ScannerTask", "office文件数：" + videoInfos.size());
-        return videoInfos;
+        fileInfos = getVideoFile(fileInfos, Environment.getExternalStorageDirectory());
+        fileInfos = filterVideo(fileInfos);
+        Log.i("ScannerTask", "office文件数：" + fileInfos.size());
+        return fileInfos;
     }
 
     @Override
@@ -46,9 +48,9 @@ public class OfficeFileScannerTask extends AsyncTask<Void, Integer, List<fileInf
     }
 
     @Override
-    protected void onPostExecute(List<fileInfo> videoInfos) {
-        super.onPostExecute(videoInfos);
-        adapter = new FileListAdapter(context, videoInfos);
+    protected void onPostExecute(List<fileInfo> fileInfos) {
+        super.onPostExecute(fileInfos);
+        adapter = new FileListAdapter(context, fileInfos,fileChosenInfos);
         adapter.notifyDataSetChanged();
         lv.setAdapter(adapter);
     }
@@ -79,13 +81,13 @@ public class OfficeFileScannerTask extends AsyncTask<Void, Integer, List<fileInf
                             || name.equalsIgnoreCase(".doc")
                             || name.equalsIgnoreCase(".docx")
                             || name.equalsIgnoreCase(".txt")
-                           ) {
+                            ) {
                         fileInfo video = new fileInfo();
                         file.getUsableSpace();
                         video.setFileName(file.getName());
                         video.setPath(file.getAbsolutePath());
+                        video.setState(0);//默认未选中
 
-                        video.setState(1);//默认选中
                         Log.i("ScannerTask", "name" + video.getPath());
                         list.add(video);
                         return true;
@@ -102,16 +104,16 @@ public class OfficeFileScannerTask extends AsyncTask<Void, Integer, List<fileInf
     }
 
     /**
-     *判断文件是否存在
+     * 判断文件是否存在
      *
-     * @param videoInfos
+     * @param fileInfos
      * @return
      */
-    private List<fileInfo> filterVideo(List<fileInfo> videoInfos) {
+    private List<fileInfo> filterVideo(List<fileInfo> fileInfos) {
         List<fileInfo> newVideos = new ArrayList<fileInfo>();
-        for (fileInfo videoInfo : videoInfos) {
+        for (fileInfo videoInfo : fileInfos) {
             File f = new File(videoInfo.getPath());
-            if (f.exists() && f.isFile() ) {
+            if (f.exists() && f.isFile()) {
                 newVideos.add(videoInfo);
                 Log.i("ScannerTask", "文件大小" + f.length());
             } else {

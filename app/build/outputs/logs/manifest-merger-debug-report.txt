@@ -2,7 +2,7 @@
 manifest
 ADDED from D:\AndroidStudioProjects\WPSDemo\app\src\main\AndroidManifest.xml:2:1-45:12
 	package
-		ADDED from D:\AndroidStudioProjects\WPSDemo\app\src\main\AndroidManifest.xml:3:5-36
+		ADDED from D:\AndroidStudioProjects\WPSDemo\app\src\main\AndroidManifest.xml:3:5-33
 		INJECTED from D:\AndroidStudioProjects\WPSDemo\app\src\main\AndroidManifest.xml
 		INJECTED from D:\AndroidStudioProjects\WPSDemo\app\src\main\AndroidManifest.xml
 	android:versionName
@@ -135,12 +135,12 @@ MERGED from [com.android.support:support-compat:25.3.0] D:\AndroidStudioProjects
 		ADDED from D:\AndroidStudioProjects\WPSDemo\app\src\main\AndroidManifest.xml:20:9-45
 	android:theme
 		ADDED from D:\AndroidStudioProjects\WPSDemo\app\src\main\AndroidManifest.xml:22:9-40
-activity#com.houjianbo.wpsdemo.MainActivity
+activity#com.Cherie.wpsdemo.MainActivity
 ADDED from D:\AndroidStudioProjects\WPSDemo\app\src\main\AndroidManifest.xml:24:9-32:20
 	android:label
 		ADDED from D:\AndroidStudioProjects\WPSDemo\app\src\main\AndroidManifest.xml:26:13-45
 	android:name
-		ADDED from D:\AndroidStudioProjects\WPSDemo\app\src\main\AndroidManifest.xml:25:13-41
+		ADDED from D:\AndroidStudioProjects\WPSDemo\app\src\main\AndroidManifest.xml:25:13-59
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
 ADDED from D:\AndroidStudioProjects\WPSDemo\app\src\main\AndroidManifest.xml:27:13-31:29
 action#android.intent.action.MAIN
@@ -151,14 +151,14 @@ category#android.intent.category.LAUNCHER
 ADDED from D:\AndroidStudioProjects\WPSDemo\app\src\main\AndroidManifest.xml:30:17-77
 	android:name
 		ADDED from D:\AndroidStudioProjects\WPSDemo\app\src\main\AndroidManifest.xml:30:27-74
-activity#com.houjianbo.wpsdemo.FileListActivity
-ADDED from D:\AndroidStudioProjects\WPSDemo\app\src\main\AndroidManifest.xml:33:9-74
+activity#com.Cherie.wpsdemo.FileListActivity
+ADDED from D:\AndroidStudioProjects\WPSDemo\app\src\main\AndroidManifest.xml:33:9-71
 	android:name
-		ADDED from D:\AndroidStudioProjects\WPSDemo\app\src\main\AndroidManifest.xml:33:19-72
-receiver#com.houjianbo.wpsdemo.MyBroadCastReciver
+		ADDED from D:\AndroidStudioProjects\WPSDemo\app\src\main\AndroidManifest.xml:33:19-69
+receiver#com.Cherie.wpsdemo.MyBroadCastReciver
 ADDED from D:\AndroidStudioProjects\WPSDemo\app\src\main\AndroidManifest.xml:34:9-42:20
 	android:name
-		ADDED from D:\AndroidStudioProjects\WPSDemo\app\src\main\AndroidManifest.xml:34:19-74
+		ADDED from D:\AndroidStudioProjects\WPSDemo\app\src\main\AndroidManifest.xml:34:19-71
 intent-filter#cn.wps.moffice.file.close+com.kingsoft.writer.back.key.down+com.kingsoft.writer.back.key.down+com.kingsoft.writer.home.key.down
 ADDED from D:\AndroidStudioProjects\WPSDemo\app\src\main\AndroidManifest.xml:35:12-41:29
 action#com.kingsoft.writer.back.key.down

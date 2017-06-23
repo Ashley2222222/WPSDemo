@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.houjianbo.wpsdemo.test">
+    package="com.Cherie.wpsdemo.test">
 
     <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="19" />
 
@@ -9,8 +9,8 @@
     </application>
 
     <instrumentation android:name="android.test.InstrumentationTestRunner"
-                     android:targetPackage="com.houjianbo.wpsdemo"
+                     android:targetPackage="com.Cherie.wpsdemo"
                      android:handleProfiling="false"
                      android:functionalTest="false"
-                     android:label="Tests for com.houjianbo.wpsdemo"/>
+                     android:label="Tests for com.Cherie.wpsdemo"/>
 </manifest>

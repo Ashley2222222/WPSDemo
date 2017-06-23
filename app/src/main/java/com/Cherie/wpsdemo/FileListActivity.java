@@ -21,6 +21,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 /**
+ * 文件列表页面，列表显示内存里的所有office文件
  * Created by liangxy on 2017/5/26.
  */
 public class FileListActivity extends Activity implements View.OnClickListener {
@@ -31,8 +32,8 @@ public class FileListActivity extends Activity implements View.OnClickListener {
     Button btnConfirm;
     @Bind(R.id.ll_confirm)
     LinearLayout llConfirm;
-    private List<fileInfo> fileInfos = new ArrayList<fileInfo>();
-    private List<fileInfo> videoChosenInfos = new ArrayList<fileInfo>();
+    static private List<fileInfo> fileInfos = new ArrayList<fileInfo>();
+    static private List<fileInfo> fileChosenInfos = new ArrayList<fileInfo>();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -45,7 +46,12 @@ public class FileListActivity extends Activity implements View.OnClickListener {
     }
 
     private void initInfo() {
-        OfficeFileScannerTask scanTask = new OfficeFileScannerTask(fileInfos,FileListActivity.this,  lv, adapter);
+        Bundle bundle = getIntent().getExtras();
+        fileChosenInfos  = (List<fileInfo>) bundle.getSerializable("fileChosenInfos");
+        if(fileChosenInfos==null)
+            fileChosenInfos = new ArrayList<fileInfo>();
+        fileInfos = new ArrayList<fileInfo>();
+        OfficeFileScannerTask scanTask = new OfficeFileScannerTask(fileInfos,fileChosenInfos,FileListActivity.this,  lv, adapter);
         scanTask.execute();
     }
 
@@ -63,16 +69,20 @@ public class FileListActivity extends Activity implements View.OnClickListener {
 
     }
 
+    /**
+     * 返回选中的file
+     * Created by liangxy on 2017/6/23 15:05
+     */
     private void getChosenFiles() {
-
+        fileChosenInfos=new ArrayList<>();
         for(fileInfo vi: fileInfos)
         {
             if(vi.getState()==1)
-                videoChosenInfos.add(vi);
+                fileChosenInfos.add(vi);
         }
         Intent intent = new Intent(FileListActivity.this, MainActivity.class);
         Bundle bundle = new Bundle();
-        bundle.putSerializable("fileChosenInfos", (Serializable) videoChosenInfos);
+        bundle.putSerializable("fileChosenInfos", (Serializable) fileChosenInfos);
         intent.putExtras(bundle);
         setResult(1, intent);
         this.finish();

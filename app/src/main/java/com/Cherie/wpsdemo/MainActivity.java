@@ -13,6 +13,7 @@ import android.widget.ListView;
 import com.Cherie.Adapter.ShowSelectFileListAdapter;
 import com.Cherie.model.fileInfo;
 
+import java.io.Serializable;
 import java.util.List;
 
 import butterknife.Bind;
@@ -28,7 +29,7 @@ public class MainActivity extends Activity {
     @Bind(R.id.lv)
     ListView lv;
     ShowSelectFileListAdapter adapter;
-
+    static List<fileInfo> fileChosenInfos;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,18 +44,13 @@ public class MainActivity extends Activity {
 
             @Override
             public void onClick(View v) {
+
                 Intent intent = new Intent(MainActivity.this,
                         FileListActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("fileChosenInfos", (Serializable) fileChosenInfos);
+                intent.putExtras(bundle);
                 startActivityForResult(intent, 1);
-//				boolean flag = openFile(stringPath);
-//				if (flag == true) {
-//
-//					Toast.makeText(MainActivity.this," 打开文件成功", 2000).show();
-//				}else{
-//					Toast.makeText(MainActivity.this, "打开文件失败", 2000).show();
-//				}
-
-
             }
         });
     }
@@ -71,7 +67,7 @@ public class MainActivity extends Activity {
                 if (null != data) {
                     //返回选择的文件名列表
                     Bundle bundle = data.getExtras();
-                    List<fileInfo> fileChosenInfos = (List<fileInfo>) bundle.getSerializable("fileChosenInfos");
+                    fileChosenInfos  = (List<fileInfo>) bundle.getSerializable("fileChosenInfos");
                     adapter = new ShowSelectFileListAdapter(ctx, fileChosenInfos);
 
                     adapter.notifyDataSetChanged();

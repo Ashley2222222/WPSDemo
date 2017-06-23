@@ -37,13 +37,14 @@ public class FileListAdapter extends BaseAdapter {
     public static double FONTSIZE;
     private List<fileInfo> items = null;
     private Context context;
-    List<Integer> checkPosition;
+    List<Integer> checkPosition = new ArrayList<Integer>();
+    List<fileInfo> chosen = new ArrayList<fileInfo>();
 
-    public FileListAdapter(Context context, List<fileInfo> items) {
+    public FileListAdapter(Context context, List<fileInfo> items, List<fileInfo> chosen) {
         this.context = context;
         this.items = items;
-        init();
-        checkPosition = new ArrayList<Integer>();
+        this.chosen = chosen;
+        init(chosen);
     }
 
     @Override
@@ -61,13 +62,16 @@ public class FileListAdapter extends BaseAdapter {
         return 0;
     }
 
-    public static HashMap<Integer, Boolean> isSelected;
+//    public static HashMap<Integer, Boolean> isSelected;
 
-    // 初始化 设置所有checkbox都为未选择
-    public void init() {
-        isSelected = new HashMap<Integer, Boolean>();
+    // 初始化 设置所有checkbox状态
+    public void init(List<fileInfo> chosen) {
         for (int i = 0; i < items.size(); i++) {
-            isSelected.put(i, false);
+            fileInfo fi = items.get(i);
+            if (chosen.contains(fi)) {
+                checkPosition.add(i);
+                items.get(i).setState(1);
+            }
         }
     }
 
@@ -90,7 +94,7 @@ public class FileListAdapter extends BaseAdapter {
         //定义为final解决list项多过1屏时，点击一条项目时其他屏的相应位置项目被选中问题
         final CheckBox finalholder = viewHolder.cbState;
         viewHolder.cbState.setTag(new Integer(position));
-        if (checkPosition != null) {
+        if (checkPosition.size() > 0) {
             finalholder.setChecked((checkPosition.contains(new Integer(position)) ? true : false));
         } else {
             finalholder.setChecked(false);
@@ -100,22 +104,25 @@ public class FileListAdapter extends BaseAdapter {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
-                if (isChecked) {//合格
+                if (isChecked) {//选择
                     if (!checkPosition.contains(finalholder.getTag())) {
                         checkPosition.add((Integer) finalholder.getTag());
+                        buttonView.setButtonDrawable(R.drawable.check_on);
+                        items.get(currPosition).setState(1);
+                        if (!chosen.contains(items.get(currPosition)))
+                            chosen.add(items.get(currPosition));
+                        Log.i("FileListAdapterCheckBox", currPosition + "");
                     }
-
-                    buttonView.setButtonDrawable(R.drawable.check_on);
-                    items.get(currPosition).setState(1);
                 } else {
-                    buttonView.setButtonDrawable(R.drawable.check);
-                    items.get(currPosition).setState(0);
-
                     if (checkPosition.contains(finalholder.getTag())) {
                         checkPosition.remove(finalholder.getTag());
+                        buttonView.setButtonDrawable(R.drawable.check);
+                        items.get(currPosition).setState(0);
+                        if (chosen.contains(items.get(currPosition)))
+                            chosen.remove(items.get(currPosition));
+                        Log.i("FileListAdapterCheckBox", currPosition + "");
                     }
                 }
-                Log.i("FileListAdapterCheckBox", currPosition + "");
             }
         });
 
@@ -142,7 +149,6 @@ public class FileListAdapter extends BaseAdapter {
             @Override
             public void onClick(View v) {
                 UIUtil.setCheckBox(finalholder);
-                Log.i("FileListAdapter", currPosition + "");
             }
         });
 
