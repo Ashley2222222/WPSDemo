@@ -1790,4 +1790,14 @@
         <item name="android:background">@color/gray_light</item>
         <item name="android:clickable">false</item>
     </style>
+    <style name="row">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginTop">@dimen/padding_tiny</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@color/white_pure</item>
+        <item name="android:weightSum">2</item>
+
+    </style>
 </resources>

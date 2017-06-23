@@ -7,6 +7,18 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+
+    <!--一行linearlayout样式-->
+    <style name="row">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginTop">@dimen/padding_tiny</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@color/white_pure</item>
+        <item name="android:weightSum">2</item>
+
+    </style>
     <style name="divider">
         <!--横向分割线 -->
         <item name="android:layout_height">0.5dp</item>

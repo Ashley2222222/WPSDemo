@@ -13195,12 +13195,12 @@
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\WPSDemo\\app\\src\\main\\res\\values\\styles.xml",
                     "position": {
-                        "startLine": 17,
+                        "startLine": 29,
                         "startColumn": 4,
-                        "startOffset": 703,
-                        "endLine": 26,
+                        "startOffset": 1211,
+                        "endLine": 38,
                         "endColumn": 12,
-                        "endOffset": 1230
+                        "endOffset": 1738
                     }
                 }
             },
@@ -13216,12 +13216,33 @@
                 "from": {
                     "file": "D:\\AndroidStudioProjects\\WPSDemo\\app\\src\\main\\res\\values\\styles.xml",
                     "position": {
-                        "startLine": 9,
+                        "startLine": 21,
                         "startColumn": 4,
-                        "startOffset": 382,
-                        "endLine": 15,
+                        "startOffset": 890,
+                        "endLine": 27,
                         "endColumn": 12,
-                        "endOffset": 680
+                        "endOffset": 1188
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 1792,
+                    "startColumn": 4,
+                    "startOffset": 137866,
+                    "endLine": 1801,
+                    "endColumn": 12,
+                    "endOffset": 138328
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioProjects\\WPSDemo\\app\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 413,
+                        "endLine": 20,
+                        "endColumn": 12,
+                        "endOffset": 884
                     }
                 }
             }

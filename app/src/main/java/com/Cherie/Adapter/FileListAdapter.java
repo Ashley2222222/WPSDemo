@@ -81,12 +81,13 @@ public class FileListAdapter extends BaseAdapter {
         LayoutInflater inflater = null;
         final int currPosition = position;
         viewHolder = new ViewHolder();
-        if (convertView == null) {
+//        if (convertView == null) {
             inflater = LayoutInflater.from(context);
             convertView = inflater.inflate(R.layout.item_file, null);
-        } else {
-            viewHolder = (ViewHolder) convertView.getTag();
-        }
+//        }
+//        else {
+//            viewHolder = (ViewHolder) convertView.getTag();
+//        }
 
         viewHolder.tv_name = (TextView) convertView.findViewById(R.id.tv_name);
         viewHolder.iv = (ImageView) convertView.findViewById(R.id.thumb);

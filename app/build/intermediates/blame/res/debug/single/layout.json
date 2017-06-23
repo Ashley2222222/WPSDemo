@@ -72,6 +72,10 @@
         "source": "D:\\AndroidStudioProjects\\WPSDemo\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.0\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
     },
     {
+        "merged": "D:\\AndroidStudioProjects\\WPSDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_file_chosen.xml",
+        "source": "D:\\AndroidStudioProjects\\WPSDemo\\app\\src\\main\\res\\layout\\item_file_chosen.xml"
+    },
+    {
         "merged": "D:\\AndroidStudioProjects\\WPSDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
         "source": "D:\\AndroidStudioProjects\\WPSDemo\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.0\\res\\layout\\select_dialog_item_material.xml"
     },
