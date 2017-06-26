@@ -37,7 +37,7 @@ public class FileUtil {
         Bundle bundle = new Bundle();
         bundle.putString(WpsInfo.OPEN_MODE, WpsInfo.OpenMode.NORMAL); // 打开模式
         bundle.putBoolean(WpsInfo.SEND_CLOSE_BROAD, true); // 关闭时是否发送广播
-        bundle.putString(WpsInfo.THIRD_PACKAGE, ctx.getPackageName()); // 第三方应用的包名，用于对改应用合法性的验证
+        bundle.putString(WpsInfo.THIRD_PACKAGE, ctx.getPackageName()); // 第三方应用的包名，用于对该应用合法性的验证
         bundle.putBoolean(WpsInfo.CLEAR_BUFFER, true);// 清除打开记录
         bundle.putBoolean(WpsInfo.CLEAR_TRACE, true);// 清除打开记录
         // bundle.putBoolean(CLEAR_FILE, true); //关闭后删除打开文件

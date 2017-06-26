@@ -14,21 +14,16 @@ public class MyBroadCastReciver extends BroadcastReceiver {
 		switch (intent.getAction()) {
 		case Reciver.ACTION_BACK://返回键广播
 			System.out.println(Reciver.ACTION_BACK);
-
 			break;
 		case Reciver.ACTION_CLOSE://关闭文件时候的广播
 			System.out.println(Reciver.ACTION_CLOSE);
-		
 			break;
 		case Reciver.ACTION_HOME://home键广播
 			System.out.println(Reciver.ACTION_HOME);
-
 			break;
 		case Reciver.ACTION_SAVE://保存广播
 			System.out.println(Reciver.ACTION_SAVE);
-
 			break;
-
 		default:
 			break;
 		}
