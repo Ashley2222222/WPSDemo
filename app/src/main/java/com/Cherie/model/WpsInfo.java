@@ -21,8 +21,8 @@ public class WpsInfo {
 	public static final String CACHE_FILE_INVISIBLE = "CacheFileInvisible";// Wps生成的缓存文件外部是否可见
 
 	public class OpenMode {
-		public static final String NORMAL = "Normal";// 只读模式
-		public static final String READ_ONLY = "ReadOnly";// 正常模式
+		public static final String NORMAL = "Normal";//正常模式
+		public static final String READ_ONLY = "ReadOnly";//  只读模式
 		public static final String READ_MODE = "ReadMode";// 打开直接进入阅读器模式
 															// 仅Word、TXT文档支持
 		public static final String SAVE_ONLY = "SaveOnly";// 保存模式(打开文件,另存,关闭)

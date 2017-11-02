@@ -35,7 +35,7 @@ public class FileUtil {
         mProgressDialog = new ProgressDialog(ctx);
         Intent intent = new Intent();
         Bundle bundle = new Bundle();
-        bundle.putString(WpsInfo.OPEN_MODE, WpsInfo.OpenMode.NORMAL); // 打开模式
+        bundle.putString(WpsInfo.OPEN_MODE, WpsInfo.OpenMode.READ_MODE); // 打开模式
         bundle.putBoolean(WpsInfo.SEND_CLOSE_BROAD, true); // 关闭时是否发送广播
         bundle.putString(WpsInfo.THIRD_PACKAGE, ctx.getPackageName()); // 第三方应用的包名，用于对该应用合法性的验证
         bundle.putBoolean(WpsInfo.CLEAR_BUFFER, true);// 清除打开记录
